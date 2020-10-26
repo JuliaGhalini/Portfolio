@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Альфа-Банк</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head> 
+<body>
+    <header>
+        <div class="header__logo"><p>Альфа-Банк</p></div>
+    </header>
+    <h1>Тест-кейс анкеты "Заявка на дебетовую карту"</h1>
+    <table>
+        <thead>
+        <tr>
+            <td>ID</td>
+            <td>Название (Title)</td>
+            <td>Описание( Summary)</td>
+            <td>Приоритет (Priority)</td>
+            <td width="100" height="20">Шаги (Steps to reproduce)</td>
+            <td>Ожидаемый результат (Expected result)</td>
+            <td>Комментарии к тесту</td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr align="center">
+            <td rowspan="2">
+                <strong>alf_001</strong>
+            </td>
+            <td rowspan="2" align="center">
+                <strong>Запуск страницы "Заявка на дебетовую карту"</strong>
+            </td>
+            <td rowspan="2" align="center">
+                Переход по ссылке <a href="http://zayavka-na-kartu-1.sdew.ru/">"Заявка на дебетовую карту"</a>
+            </td>
+            <td rowspan="2" align="centre">
+                Высокий
+            </td>
+            <td align="left">
+                <strong>1.Открыть Тест-кейс в браузере Gооgle Chrome</strong>
+            </td>
+            <td align="left">1.Открыто успешно, просмотр графы с ссылкой на сайт </td>
+            <td rowspan="2" align="left">
+                <strong></strong>
+            </td>
+        </tr>
+        <tr align="left">
+            <td>
+                <strong>2.Кликнуть по гиперсcылке заданной формы</strong>
+            </td>
+                <td align="left">2.Загрузка формы . Страница "Заявка на дебетовую карту" открывается</td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr align="center">
+            <tbody>
+            <tr align="center">
+            <td rowspan="2">
+                <strong>alf_002</strong>
+            </td>
+            <td rowspan="2" align="center">
+                <strong> Пустые строки в полях ввода данных</strong>
+            </td>
+            <td rowspan="2" align="center">
+                Отправить анкету на сервер с незаполненными полями
+            </td>
+            <td rowspan="2" align="centre">
+                <strong>Высокий</strong>
+            </td>
+            <td align="left">
+                <strong>1.Оставить все строки полей для ввода пустыми. Нажать кнопку "Отправить"</strong>
+            </td>
+            <td align="left">1.Сообщение об ошибке под каждым полем. Данные не проходят в базу данных</td>
+            <td rowspan="2" align="left">
+                <strong>Исключить отправку пустой формы запроса в базу данных банка, для избежания DDos атак</strong>
+            </td>
+            </tr>
+            <tr align="left">
+            <td>
+            <strong>2.Оставить все строки полей для ввода пустыми. Несколько раз подряд нажать кнопку "Отправить"</strong>
+            </td>
+            <td align="left">2.Сообщение об ошибке под каждым полем. Данные не проходят в базу данных</td>
+         </tr>
+            </tr>
+            </tbody>
+        <td rowspan="7">
+                <strong>alf_003</strong>
+            </td>
+            <td rowspan="7" align="center">
+                <strong>Ввод валидных данных во все поля для заполнения</strong>
+            </td>
+            <td rowspan="7" align="center">
+                Заполнить все поля анкеты, отправить на сервер валидные данные
+            </td>
+            <td rowspan="7" align="center">
+                Высокий
+            </td>
+            <td align="left">
+                <strong>1.Ввести корректное имя кириллицей в поле ввода "Имя" </strong>
+                <ul>
+                    <li>Артем</li>
+                </ul>
+            </td>
+            <td align="left">1.В поле "Имя" отображается введенное Имя</td>
+            <td rowspan="7" align="left">
+                <strong></strong>
+            </td>
+            </tr>
+            <tr align="left">
+            <td>
+                <strong>2.Ввести корректную фамилию кириллицей в поле ввода "Фамилия" </strong>
+                <ul>
+                    <li>Смирнов</li>
+                </ul>
+            </td>
+            <td align="left">2. В поле "Фамилия" отображается введенная Фамилия</td>
+            </tr>
+            <tr align="left">
+                <td>
+                    <strong>3.Ввести корректное отчество кириллицей в поле ввода "Отчество" </strong>
+                    <ul>
+                        <li>Сергеевич</li>
+                    </ul>
+                </td>
+                    <td align="left">3. В поле "Отчество" отображается введенное Отчество</td>
+            </tr>
+            <tr align="left">
+            <td>
+                <strong>4.Ввести валидный номер телефона цифрами в поле ввода "Телефон" </strong>
+                <ul>
+                    <li>+7 956 647 8595</li>
+                </ul>
+            </td>
+            <td align="left">4. В поле "Телефон" отображается введенный номер </td>
+            <tr align="left">
+                <td>
+                    <strong>5. В поле ввода "Дата рождения" ввести валидную дату </strong>
+                    <ul>
+                        <li>17.06.1995</li>
+                    </ul>
+                </td>
+                    <td align="left">5.Ввод данных происходит, в сплывающем окне подтягивает данные правильно </td>
+            </tr>
+            <tr align="left">
+                <td>
+                   <strong>6. ввести валидные паспортные данные в поле ввода "Паспорт" </strong>
+                <ul>
+                    <li>1234 №123456</li>
+                </ul>
+                 </td>
+                <td align="left">6. В поле "Паспорт" отображается введенные серия и номер с пробелом между ними</td>
+            </tr>
+            <tr align="left">
+                <td>
+                    <strong>7. Нажать кнопку "Отправить"</strong>
+                </td>
+                    <td align="left">7. Переход на следующий этап оформления карты. Данные внесены в базу данных</td>
+            </tr>
+        </tbody>
+        <tbody>
+            <tr align="center">
+            <td rowspan="1">
+                <strong>alf_004</strong>
+            </td>
+            <td rowspan="1" align="center">
+                <strong>Пустое поле ввода "Отчество"</strong>
+            </td>
+            <td rowspan="1" align="center">
+                Отправить на сервер данные анкеты без Отчества
+            </td>
+            <td rowspan="1" align="centre">
+                Высокий
+            </td>
+            <td align="left">
+                <strong>1. Ввести валидные данные во все поля, поле ввода "Отчество" оставить пустым, нажать кнопку "Оправить"</strong>
+            </td>
+            <td align="left">1. Переход на следующий этап оформления карты. Данные внесены в базу данных</td>
+            <td rowspan="2" align="left">
+                <strong>Учесть отсутствие Отчества клиента</strong>
+            </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr align="center">
+            <td rowspan="2">
+                <strong>alf_005</strong>
+            </td>
+            <td rowspan="2" align="center">
+                <strong> Редко используемые символы и буквы</strong>
+            </td>
+            <td rowspan="2" align="center">
+                Ввести букву ё и знаки ударения в анкету
+            </td>
+            <td rowspan="2" align="centre">
+                Высокий
+            </td>
+            <td align="left">
+                <strong>1.Ввести данные в поля ввода данных "ФИО" со знаками ударения</strong>
+                <ul>
+                    <li>Са́лем</li>
+                    <li>Ма́стеров</li>
+                    <li>Му́нзорович</li>
+                </ul>
+            </td>
+            <td align="left">1.Сообщение об ошибке, данные на сервер не проходят</td>
+            <td rowspan="2" align="left">
+                <strong>Паспорт гражданина РФ не может содержать знак ударения в ФИО</strong>
+            </td>
+            </tr>
+            <tr align="left">
+            <td>
+                <strong>2.Ввести данные в поля ввода "ФИО"  содержащие букву "ё"</strong>
+                <ul>
+                    <li>Аксён</li>
+                    <li>Аксёнова</li>
+                    <li>Семёнович</li>
+                </ul>
+            </td>
+                <td align="left">2.В поля "ФИО" отображаются введенные данные с буквой ё</td>
+             </tr>
+        </tbody>
+        <tbody>
+            <tr align="center">
+            <td rowspan="5">
+                <strong>alf_006</strong>
+            </td>
+            <td rowspan="5" align="center">
+                <strong> Символы в начале и в конце текста</strong>
+            </td>
+            <td rowspan="5" align="center">
+                Ввести пробел перед и за текстом 
+            </td>
+            <td rowspan="5" align="centre">
+                 Высокий
+            </td>
+            <td align="left">
+                <strong>1. Ввести валидное значение в поля ввода данных "ФИО" затем нажать пробел</strong>
+                <ul>
+                    <li>Анастасия</li>
+                    <li>Матюшенко</li>
+                    <li>Сергеевна</li> 
+                </ul>
+            </td>
+            <td align="left">1. Пробел не читается как символ, не вносится в строку ввода</td>
+            <td rowspan="5" align="left">
+                <strong></strong>
+            </td>
+        </tr>
+        <tr align="left">
+            <td>
+                <strong>2. Нажать пробел затем ввести валидное значение в поля ввода "ФИО" </strong>
+                <ul>
+                    <li>Анастасия</li>
+                    <li>Матюшенко</li>
+                    <li>Сергеевна</li> 
+                </ul>
+            </td>
+                <td align="left">2.Пробел автоматически убирается, не читается как символ</td>
+             </tr>
+             <tr align="left">
+            <td>
+                <strong>3. Нажать пробел и ввести  валидное значение в поле ввода данных "Телефон", "Паспорт"</strong>
+                <ul>
+                    <li>+7 951 647 53 74</li>
+                    <li>1234 123456</li>
+                </ul>
+            </td>
+            <td align="left">3.Пробел автоматически убирается, не читается как символ</td>
+            </tr>
+             <tr align="left">
+            <td>
+                <strong>4. Ввести валидное значение в поле ввода данных "Дата рождения" </strong>
+                <ul>
+                    <li>15.08.1995</li>
+                </ul>
+             </td>
+            <td align="left">4.Ввод данных происходит, всплывающем окне подтягивает данные правильно</td>
+            </tr>
+            <tr align="left">
+            <td>
+                <strong>5. Нажать кнопку "Отправить"</strong>
+            </td>
+            <td align="left">5.Переход на следующий этап оформления карты,  данные внесены в базу данных</td>
+        </tr>
+        </tbody>
+        <tbody>
+            <tr align="center">
+            <td rowspan="6">
+                <strong>alf_007</strong>
+            </td>
+            <td rowspan="6" align="center">
+                <strong>Символы, числа и латинские буквы в полях ввода ФИО и Паспорт</strong>
+            </td>
+            <td rowspan="6" align="center">
+                Ввести латинские буквы, проверить способность страницы обрабатывать запрос, показывать ошибки, корректная работа валидации.
+            </td>
+            <td rowspan="6" align="centre">
+                Высокий
+            </td>
+            <td align="left">
+                <strong>1. Ввести данные содержащие латинские буквы в поле ввода "Имя"</strong>
+                <ul>
+                    <li>Yulia</li>
+                </ul>
+            </td>
+            <td align="left">1. Программа сообщает об ошибке, блокирует ввод латинских букв </td>
+            <td rowspan="6" align="left">
+                <strong>Банк не предоставляет кредитные услуги иностранным гражданам. Ввод латинских букв невозможен</strong>
+            </td>
+            </tr>
+            <tr align="left">
+            <td>
+                <strong>2. Ввести данные содержащие цифры в поле ввода "Фамилия" </strong>
+                <ul>
+                    <li>Сми637рнов</li>
+                </ul>
+            </td>
+            <td align="left">2. Программы сообщает об ошибке, блокирует ввод цифр</td>
+            </tr>
+            <tr align="left">
+            <td>
+                <strong>3. Ввести данные содержащие символы в поле ввода "Отчество"</strong>
+                <ul>
+                    <li>Сер*?/ч</li>
+                </ul>
+            </td>
+             <td align="left">3. Программа сообщает об ошибке, блокирует любые символы</td>
+            </tr>
+            <tr align="left">
+            <td>
+                <strong>4. Ввести данные содержащие буквы в поле ввода "Телефон"</strong>
+                <ul>
+                    <li>+7 956 95/ id пр</li>
+                </ul>
+            </td>
+            <td align="left">4.Программа сообщает об ошибке, блокирует ввод букв</td>
+            <tr align="left">
+            <td>
+                <strong>5.Ввести данные содержащие латинские цифры в поле ввода "Дата рождения"</strong>
+                <ul>
+                    <li>XI.XX.YXXX</li>
+                </ul>
+            </td>
+                <td align="left">5.Программа сообщает об ошибке, блокирует ввод посторонних символов</td>
+            </tr>
+            <tr align="left">
+            <td>
+                <strong>6.Ввести данные содержащие буквы, символы в поле ввода "Паспорт"</strong>
+                <ul>
+                    <li>FB, па, %;?</li>
+                </ul>
+            </td>
+            <td align="left">6.Программа сообщает об ошибке, блокирует ввод посторонних символов</td>
+            </tr>
+            </tbody>
+             <tbody>
+            <tr align="center">
+            <td rowspan="3">
+                <strong>alf_008</strong>
+            </td>
+            <td rowspan="3" align="center">
+                <strong>Всплывающее окно календаря</strong>
+            </td>
+            <td rowspan="3" align="center">
+                Проверить корректную работу поля "Дата рождения", задействовать всплывающее окно календаря
+            </td>
+            <td rowspan="3" align="centre">
+            Высокий
+            </td>
+            <td align="left">
+                <strong>1.Ввести не валидные данные с помощью клавиатуры в поле ввода "Дата рождения"</strong>
+                <ul>
+                    <li>1995.09.28</li>
+                </ul>
+            </td>
+                 <td align="left">1.Программа сообщает о последовательности ввода данных день/месяц/год </td>
+            <td rowspan="4" align="left">
+                <strong></strong>
+            </td>
+            <tr align="left">
+                <td>
+                    <strong>2. Поменять дату рождения в сплывающем окне календаря </strong>
+                </td>
+                <td align="left">2. Можно автоматически заменить в сплывающем окне</td>
+            </tr>
+            <tr align="left">
+                 <td>
+                    <strong>3. Ввести не существующий год</strong>
+                    <ul>
+                        <li>2022</li>
+                    </ul>
+                </td>
+                    <td align="left">3.Программа сообщает об ошибке. Данные на сервер не пропускает</td>
+            </tr>
+        </tbody>
+        <tbody>
+            <tr align="center">
+            <td rowspan="4">
+                <strong>alf_009</strong>
+            </td>
+            <td rowspan="4" align="center">
+                <strong>Заполнение формы "Телефон"</strong>
+            </td>
+            <td rowspan="4" align="center">
+                Реакция программы на неверный код страны и номер оператора 
+            </td>
+            <td rowspan="4" align="centre">
+                Высокий
+            </td>
+            <td align="left">
+                <strong>1.Ввести в поле несуществующий номер оператора </strong>
+                <ul>
+                    <li>+7(659)</li>
+                </ul>
+            </td>
+                 <td align="left">1.Сообщение об ошибке. Ввести только валидный номер оператора</td>
+            <td rowspan="4" align="left">
+                <strong></strong>
+            </td>
+            </tr>
+            <tr align="left">
+            <td>
+                <strong>2.Ввести номер телефона с кодом другой страны  Туркменистан </strong>
+                <ul>
+                    <li>+993</li>
+                </ul>
+            </td>
+                 <td align="left">2.Сообщение об ошибке. Предупреждение, что можно использовать только код РФ</td>
+            </tr>
+            <tr align="left">
+                <td>
+                    <strong>3. Заполнить все поля формы валидными данными</strong>
+                    <ul>
+                        <li>Анатолий</li>
+                        <li>Свиридов</li>
+                        <li>Семенович</li>
+                        <li>+7 951 659 87 24</li>
+                        <li>17.05.1995</li>
+                        <li>1458 145849</li>
+                    </ul>
+                </td>
+                <td align="left">3.Поля формы заполнены корректно</td>
+            </tr>
+            <tr align="left">
+                 <td>
+                    <strong>4. Нажать кнопку "Отправить"</strong>
+                </td>
+                    <td align="left">4. На номер телефона клиента приходит код подтверждения, нужно ввести номер в форму программы. Переход на следующий этап оформления карты,  данные внесены в базу данных.</td>
+            </tr>
+        </tbody>
+         <tbody>
+            <tr align="center">
+            <td rowspan="4">
+                <strong>alf_010</strong>
+            </td>
+            <td rowspan="4" align="center">
+                <strong>Заполнение и отправка анкеты в браузерах:  Firefox, Edge, Opera</strong>
+            </td>
+            <td rowspan="4" align="center">
+                Проверка заполнения и отправки анкеты в разных web-браузерах 
+            </td>
+            <td rowspan="4" align="centre">
+                Высокий
+            </td>
+            <td align="left">
+                <strong>1.Заполнить поля ввода валидными данными,  нажать кнопку "Отправить"</strong>
+                <ul>
+                    <li>Анатолий</li>
+                    <li>Свиридов</li>
+                    <li>Семенович</li>
+                    <li>+7 951 659 87 24</li>
+                    <li>17.05.1995</li>
+                    <li>1458 145849</li>
+                </ul>
+            </td>
+                 <td align="left">1. Поля заполнены верно. Переход на следующий этап оформления карты,  данные внесены в базу данных</td>
+            <td rowspan="4" align="left">
+                <strong>Выбор тестового окружения осуществлен на сайте<a href="http://zayavka-na-kartu-1.sdew.ru/"> "Statcounter"</a></strong>
+            </td>
+            </tr>
+            <tr align="left">
+            <td>
+                <strong>2.Очисть поля анкеты</strong>
+            </td>
+                 <td align="left">2.Поля анкеты пусты, можно продолжить работу</td>
+            </tr>
+            <tr align="left">
+                <td>
+                    <strong>3.Выбрать дату рождения в сплывающем окне календаря "Дата рождения"</strong>
+                </td>
+                <td align="left">3.Дата рождения выбрана корректно </td>
+            </tr>
+            <tr align="left">
+                 <td>
+                    <strong>4.Проверить отображение графических элементов на странице</strong>
+                </td>
+                    <td align="left">4.Графические элементы расположены согласно спецификации</td>
+            </tr>
+        </tbody>
+         <tbody>
+            <tr align="center">
+            <td rowspan="5">
+                <strong>alf_011</strong>
+            </td>
+            <td rowspan="5" align="center">
+                <strong>Заполнение и отправка анкеты в мобильных браузерах: Chrome /Safari</strong>
+            </td>
+            <td rowspan="5" align="center">
+                Проверка заполнения и отправки анкеты в браузерах на мобильном устройстве
+            </td>
+            <td rowspan="5" align="centre">
+                Высокий
+            </td>
+            <td align="left">
+                <strong>1.Заполнить поля ввода данных валидными данными,  нажать кнопку "Отправить" </strong>
+                <ul>
+                    <li>Анатолий</li>
+                    <li>Свиридов</li>
+                    <li>Семенович</li>
+                    <li>+7 951 659 87 24</li>
+                    <li>17.05.1995</li>
+                    <li>1458 145849</li>
+                </ul>
+            </td>
+                 <td align="left">1. Поля заполнены верно. Переход на следующий этап оформления карты,  данные внесены в базу данных</td>
+            <td rowspan="5" align="left">
+                <strong>Для тестирования приложения на мобильном устройстве можно использовать.  Эмулятор девайcов <a href="https://www.BrowserStack.com/"> browserstack</a></strong>
+            </td>
+            </tr>
+            <tr align="left">
+            <td>
+                <strong>2.Очисть поля анкеты</strong>
+            </td>
+                 <td align="left">2.Поля анкеты пусты, можно продолжить работу</td>
+            </tr>
+            <tr align="left">
+                <td>
+                    <strong>3.Выбрать дату рождения в сплывающем окне календаря "Дата рождения"</strong>
+                </td>
+                <td align="left">3.Дата рождения выбрана корректно </td>
+            </tr>
+            <tr align="left">
+                 <td>
+                    <strong>4.Проверить отображение графических элементов на странице</strong>
+                </td>
+                    <td align="left">4.Графические элементы расположены согласно спецификации</td>
+            </tr>
+            <tr align="left">
+                <td>
+                   <strong>5.Проверить отображение графических элементов на странице</strong>
+               </td>
+                   <td align="left">5.Графические элементы расположены согласно спецификации</td>
+           </tr>
+        </tbody>
+        <tbody>
+            <tr align="center">
+            <td rowspan="4">
+                <strong>alf_012</strong>
+            </td>
+            <td rowspan="4" align="center">
+                <strong>Граничные значения полей ввода данных</strong>
+            </td>
+            <td rowspan="4" align="center">
+                Внести минимальный и максимальный набор символов в строки
+            </td>
+            <td rowspan="4" align="centre">
+            Средний
+            </td>
+            <td align="left">
+                <strong>1.Ввести минимальное количество символов в поле ввода данных "ФИО" </strong>
+                <ul>
+                    <li>Один валидный символ "О"</li>
+                </ul>
+            </td>
+                 <td align="left">1.Сообщение об ошибке "Значение поля должно содержать больше одной буквы"</td>
+            <td rowspan="4" align="left">
+                <strong></strong>
+            </td>
+            </tr>
+            <tr align="left">
+            <td>
+                <strong>2.Ввести максимальное количество символов в поле ввода данных "ФИО" </strong>
+                <ul>
+                    <li>олгвпагпцарлшрщаарщращрцущращцрущааруцщраащуращуцрщавоивоссвопсгс</li>
+                </ul>
+            </td>
+                 <td align="left">2.Сообщение об ошибке. Значение поля не должно содержать больше допустимого количества символов. Блокировка продолжения набора символов.</td>
+            </tr>
+            <tr align="left">
+                <td>
+                    <strong>3.Ввести минимальное  количество символов в поле ввода данных "Телефон", "Паспорт" </strong>
+                    <ul>
+                        <li>(+7 9)</li>
+                        <li>12</li>
+                    </ul>
+                </td>
+                <td align="left">3.Сообщение об ошибке "Поле заполнено не полностью"</td>
+            </tr>
+            <tr align="left">
+                 <td>
+                    <strong>4.Ввести максимальное  количество символов в поле ввода данных "Телефон", "Паспорт" </strong>
+                    <ul>
+                        <li>+764612749127937218008990</li>
+                        <li>12626262262626262626262626</li>
+                    </ul>
+                </td>
+                    <td align="left">4.Сообщение об ошибке. Блокировка продолжения набора символов.</td>
+            </tr>
+        </tbody>
+        <tbody>
+            <tr align="center">
+            <td rowspan="3">
+                <strong>alf_013</strong>
+            </td>
+            <td rowspan="3" align="center">
+                <strong>Работа горячих клавиш</strong>
+            </td>
+            <td rowspan="3" align="center">
+                Корректная работа формы при нажатии навигации по сайту с помощью клавиатуры
+            </td>
+            <td rowspan="3" align="centre">
+                Cредний
+            </td>
+            <td align="left">
+                <strong>1. Ввести валидные данные в поле ввода "ФИО", нажать на клавиатуре стрелки </strong>
+                <ul>
+                    <li>right</li>
+                    <li>left</li>
+                </ul>
+            </td>
+            <td align="left">1. Переход курсива по буквам в полях ввода в соответствие с направлением нажатых стрелок</td>
+            <td rowspan="3" align="left">
+                <strong></strong>
+            </td>
+            </tr>
+            <tr align="left">
+            <td>
+                <strong>2.Нажать на клавиатуре стрелки up, down</strong>
+                <ul>
+                    <li>up</li>
+                    <li>down</li>
+                </ul>
+            </td>
+                <td align="left">2.Переход курсива на следующее поле для заполнения, в соответствие с направлением нажатых стрелок</td>
+                </tr>
+             <tr align="left">
+            <td>
+                <strong>3.Выделить текст, нажать на клавиатуре комбинацию клавиш </strong>
+                <ul>
+                    <li>Ctrl+c</li>
+                    <li>Ctrl+c</li>
+                </ul>
+            </td>
+                <td align="left">3.Происходит копирование и вставка текста в нужные поля</td>
+                </tr>
+            </tbody>
+            
+            <tbody>
+            <tr align="center">
+            <td rowspan="2">
+                <strong>alf_014</strong>
+            </td>
+            <td rowspan="2" align="center">
+                <strong>Масштаб страницы </strong>
+            </td>
+            <td rowspan="2" align="center">
+                Изменить масштаб страницы в адресной строке сайта
+            </td>
+            <td rowspan="2" align="centre">
+                Низкий
+            </td>
+            <td align="left">
+                <strong>1.Уменьшить окно анкеты с 125% до минимально допустимого</strong>
+                <ul>
+                    <li>25%</li>
+                </ul>
+            </td>
+            <td align="left">1. Масштаб меняется, окно стает меньше, тест строки, заголовки, иконки, логотип, уменьшается заданным параметрам не меняя свое расположение.</td>
+            <td rowspan="2" align="left">
+                <strong></strong>
+            </td>
+            </tr>
+            <tr align="left">
+            <td>
+                <strong>2.Увеличить окно анкеты с 125% до максимально допустимого </strong>
+                <ul>
+                    <li>500%</li>
+                </ul>
+            </td>
+                <td align="left">2. Масштаб меняется, окно увеличивается, тест строки, заголовки, иконки, логотип, увеличиваются согласно заданным параметрам не меняя свое расположение.</td>
+                 </tr>
+            </tbody>
+    </table>   
+</body>   
+<footer>
+    <p> Гхалини Юлия </p>
+    <p><a href="https://t.me/Juliaghalini">Telegram</a></p>    
+</footer>
+</html>
