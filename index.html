@@ -10,7 +10,7 @@
     <header>
         <div class="header__logo"><p>Альфа-Банк</p></div>
     </header>
-    <h1>Тест-кейс анкеты "Заявка на дебетовую карту"</h1>
+    <h1>Тест-кейсы анкеты "Заявка на дебетовую карту"</h1>
     <table>
         <thead>
         <tr>
@@ -51,6 +51,13 @@
             </td>
                 <td align="left">2.Загрузка формы . Страница "Заявка на дебетовую карту" открывается</td>
         </tr>
+        </tr>
+            <tr align="left">
+            <td>
+            <strong>3.Посмотреть расположение графических элементов</strong>
+            </td>
+            <td align="left">3.Все поля отображаются согласно спецификации</td>
+         </tr>
         </tbody>
         <tbody>
         <tr align="center">
@@ -60,7 +67,7 @@
                 <strong>alf_002</strong>
             </td>
             <td rowspan="2" align="center">
-                <strong> Пустые строки в полях ввода данных</strong>
+                <strong> Отправка анкеты с незаполненными полями</strong>
             </td>
             <td rowspan="2" align="center">
                 Отправить анкету на сервер с незаполненными полями
@@ -187,7 +194,7 @@
                 <strong>alf_005</strong>
             </td>
             <td rowspan="2" align="center">
-                <strong> Редко используемые символы и буквы</strong>
+                <strong> Ввод и отправка специфичных валидных символов для полей "ФИО"./strong>
             </td>
             <td rowspan="2" align="center">
                 Ввести букву ё и знаки ударения в анкету
@@ -226,7 +233,7 @@
                 <strong>alf_006</strong>
             </td>
             <td rowspan="5" align="center">
-                <strong> Символы в начале и в конце текста</strong>
+                <strong> Ввод и отправка валидных данных с введёнными пробелами</strong>
             </td>
             <td rowspan="5" align="center">
                 Ввести пробел перед и за текстом 
@@ -360,7 +367,7 @@
                 <strong>alf_008</strong>
             </td>
             <td rowspan="3" align="center">
-                <strong>Всплывающее окно календаря</strong>
+                <strong>Проверка ввода даты рождения с помощью виджета календаря.</strong>
             </td>
             <td rowspan="3" align="center">
                 Проверить корректную работу поля "Дата рождения", задействовать всплывающее окно календаря
@@ -476,7 +483,7 @@
             </td>
                  <td align="left">1. Поля заполнены верно. Переход на следующий этап оформления карты,  данные внесены в базу данных</td>
             <td rowspan="4" align="left">
-                <strong>Выбор тестового окружения осуществлен на сайте<a href="http://zayavka-na-kartu-1.sdew.ru/"> "Statcounter"</a></strong>
+                <strong>Выбор тестового окружения осуществлен осуществлён на основе статистики наиболее популярных веб браузеров<a href="https://gs.statcounter.com/"> "Statcounter"</a></strong>
             </td>
             </tr>
             <tr align="left">
@@ -500,16 +507,16 @@
         </tbody>
          <tbody>
             <tr align="center">
-            <td rowspan="5">
+            <td rowspan="6">
                 <strong>alf_011</strong>
             </td>
-            <td rowspan="5" align="center">
+            <td rowspan="6" align="center">
                 <strong>Заполнение и отправка анкеты в мобильных браузерах: Chrome /Safari</strong>
             </td>
-            <td rowspan="5" align="center">
+            <td rowspan="6" align="center">
                 Проверка заполнения и отправки анкеты в браузерах на мобильном устройстве
             </td>
-            <td rowspan="5" align="centre">
+            <td rowspan="6" align="centre">
                 Высокий
             </td>
             <td align="left">
@@ -524,33 +531,40 @@
                 </ul>
             </td>
                  <td align="left">1. Поля заполнены верно. Переход на следующий этап оформления карты,  данные внесены в базу данных</td>
-            <td rowspan="5" align="left">
+            <td rowspan="6" align="left">
                 <strong>Для тестирования приложения на мобильном устройстве можно использовать.  Эмулятор девайcов <a href="https://www.BrowserStack.com/"> browserstack</a></strong>
             </td>
             </tr>
             <tr align="left">
             <td>
-                <strong>2.Очисть поля анкеты</strong>
+                <strong>2.Заполнить все поля валидными данными, нажать кнопку "Отправить"</strong>
             </td>
-                 <td align="left">2.Поля анкеты пусты, можно продолжить работу</td>
+                 <td align="left">2.Данные отправляются на сервер. Переход к следующему шагу оформления карты</td>
+            </tr>
+            </tr>
+            <tr align="left">
+            <td>
+                <strong>3.Очисть поля анкеты</strong>
+            </td>
+                 <td align="left">3.Поля анкеты пусты, можно продолжить работу</td>
             </tr>
             <tr align="left">
                 <td>
-                    <strong>3.Выбрать дату рождения в сплывающем окне календаря "Дата рождения"</strong>
+                    <strong>4.Выбрать дату рождения в сплывающем окне календаря "Дата рождения"</strong>
                 </td>
-                <td align="left">3.Дата рождения выбрана корректно </td>
+                <td align="left">4.Дата рождения выбрана корректно </td>
             </tr>
             <tr align="left">
                  <td>
-                    <strong>4.Проверить отображение графических элементов на странице</strong>
+                    <strong>5.Проверить отображение графических элементов на странице</strong>
                 </td>
-                    <td align="left">4.Графические элементы расположены согласно спецификации</td>
+                    <td align="left">5.Графические элементы расположены согласно спецификации</td>
             </tr>
             <tr align="left">
                 <td>
-                   <strong>5.Проверить отображение графических элементов на странице</strong>
+                   <strong>6.Проверить отображение графических элементов на странице</strong>
                </td>
-                   <td align="left">5.Графические элементы расположены согласно спецификации</td>
+                   <td align="left">6.Графические элементы расположены согласно спецификации</td>
            </tr>
         </tbody>
         <tbody>
